@@ -5,5 +5,5 @@
 # Test:
       write tests to validate the following
       ..* source and target data match
-      ..* number of columns is 3 in target format
-      ..* the data type of the count column is long	
+      ..1. number of columns is 3 in target format
+      ..2. the data type of the count column is long	
