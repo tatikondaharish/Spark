@@ -1,5 +1,5 @@
 
-** //Define a schema and read the data according to schema and display **
+//**Define a schema and read the data according to schema and display**
 
 import org.apache.spark.sql.types._
 
