@@ -1,7 +1,7 @@
-# Spark BootCamp
-Day1 : 	Sample Spark Program
+## Spark BootCamp
+*Day1 : 	Sample Spark Program
 
-Day2 : 	convert json airline data into parquet
+*Day2 : 	convert json airline data into parquet
 	Test:
 		write tests to validate the following
 		1) source and target data match
