@@ -48,6 +48,7 @@ val genderData = List(
   (2,"smith", "kate", "kate.smith@gmail.com", 2, Some("female")))
 
 //Function to find no of None cases in list
+//TODO return no of matches
 
 def getEmailsForMissingGendervalue(list : List[(Int, String, String, String, Int, Option[String])])  = {
   list.collect( l => l._6 match {case None => l})
@@ -57,7 +58,8 @@ def getEmailsForMissingGendervalue(list : List[(Int, String, String, String, Int
 
 assert(getEmailsForMissingGendervalue(genderData).map(_._6 != None).length > 0 , "Error in Function")
 
-//case class declaration in scalacase class Address (
+//case class declaration in scala
+case class Address (
 
   city : String, postalCode : String, streetAddress : String, aptNo : Option[Int] 
 )
@@ -67,9 +69,10 @@ case class Person (
 )
 
 //Find no of persons in a city
+//TODO Make it more functional style
 
 def findPersonIn(city: String, people: Seq[Person]): Set[Person] = {
-  var set : Set[Person] = Set()
+  var set : Set[Person] = Set() 
   for (l <- people ) if (l.city == city) set= set + l
   set
 }
