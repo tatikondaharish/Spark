@@ -1,4 +1,5 @@
-//We dont need to use extra vairable to store and return the result. Due to type inference scala returns the type
+//Due to type inference and everything is treated as expression
+//As everything written in scala returns something we dont need an extra variable to be declared for returning the result
 
 //As it uses type inference it does not need return type
 
