@@ -1,5 +1,5 @@
 // Databricks notebook source
-### -> Adding AGE column
+// -> Adding AGE column
 
 // COMMAND ----------
 
@@ -7,7 +7,7 @@ val data = Seq((1,"harish","tat",23),(2,"bobby","pra",18),(3,"amrutha","m",29),(
 
 // COMMAND ----------
 
-### Scala Function to check for teenager
+// Scala Function to check for teenager
 
 // COMMAND ----------
 
@@ -15,7 +15,7 @@ def tennager (x : Int) = x < 19
 
 // COMMAND ----------
 
-### Udf to check for teenager
+// Udf to check for teenager
 
 // COMMAND ----------
 
@@ -31,7 +31,7 @@ import org.apache.spark.sql.functions._
 
 // COMMAND ----------
 
-### Add array of colours
+// Add array of colours
 
 // COMMAND ----------
 
@@ -51,7 +51,7 @@ val newData = data.withColumn("favColours",addColurs($"id"))
 
 // COMMAND ----------
 
-### Scala function to have favcolurs Stirng
+// Scala function to have favcolurs Stirng
 
 // COMMAND ----------
 
@@ -61,7 +61,7 @@ def addStrings (arr : Seq[String]) : String = {
 
 // COMMAND ----------
 
-### Udf to for favColurs String
+// Udf to for favColurs String
 
 // COMMAND ----------
 
@@ -73,7 +73,7 @@ newData.withColumn("favColourString",favColourString($"favColours")).show
 
 // COMMAND ----------
 
-### Scala function to determine size of array
+// Scala function to determine size of array
 
 // COMMAND ----------
 
@@ -81,7 +81,7 @@ def colorCount(arr : Seq[String]) : Int = arr.size
 
 // COMMAND ----------
 
-### * Udf to define size of array
+// Udf to define size of array
 
 // COMMAND ----------
 
@@ -93,7 +93,7 @@ newData.withColumn("favColorCount",NoOfcolours($"favColours")).show
 
 // COMMAND ----------
 
-### Scala function to reverse a string
+// Scala function to reverse a string
 
 // COMMAND ----------
 
@@ -101,7 +101,7 @@ def reverseString (str : String) : String = str.reverse
 
 // COMMAND ----------
 
-### Udf for reverse String
+// Udf for reverse String
 
 // COMMAND ----------
 
@@ -113,7 +113,7 @@ newData.withColumn("reverseOfFirstName", reverse($"fname")).show
 
 // COMMAND ----------
 
-### Scala function to get current year
+// Scala function to get current year
 
 // COMMAND ----------
 
@@ -125,8 +125,7 @@ def calender = Calendar.getInstance.get(Calendar.YEAR)
 
 
 // COMMAND ----------
-
-### * udf to get year
+// udf to get year
 
 // COMMAND ----------
 
@@ -139,7 +138,7 @@ newData.withColumn("Year", getYear()).show
 // COMMAND ----------
 
 
-### Scala method to check Value is null or not
+// Scala method to check Value is null or not
 
 // COMMAND ----------
 
@@ -147,7 +146,7 @@ def check(value : Any) = value == null
 
 // COMMAND ----------
 
-### * udf to check for null
+// udf to check for null
 
 // COMMAND ----------
 
@@ -159,7 +158,7 @@ newData.withColumn("isFirstNameNull", isNull($"fname")).show
 
 // COMMAND ----------
 
-## Use of Array_Contains
+// Use of Array_Contains
 
 // COMMAND ----------
 
@@ -175,7 +174,7 @@ newData.filter(c).show
 
 // COMMAND ----------
 
-### Use of Array_distict
+// Use of Array_distict
 
 // COMMAND ----------
 
@@ -200,7 +199,7 @@ temp.withColumn("favcOL",array_distinct($"tem")).show
 // COMMAND ----------
 
 
-### Use of array_max
+// Use of array_max
 
 // COMMAND ----------
 
@@ -209,7 +208,7 @@ temp.withColumn("maxoftem",array_max($"tem")).show
 // COMMAND ----------
 
 
-### Use Of explode
+// Use Of explode
 
 // COMMAND ----------
 
@@ -217,7 +216,7 @@ temp.withColumn("favColours",explode($"favColours")).show
 
 // COMMAND ----------
 
-### Use Of map_keys
+// Use Of map_keys
 
 // COMMAND ----------
 
@@ -250,6 +249,6 @@ newData.withColumn("fullname",$"fname" + " " +$"lname").show
 
 // COMMAND ----------
 
-### Use of concat
-* Concat is used for adding two or more columnsMAGIC i
+// Use of concat
+// Concat is used for adding two or more columnsMAGIC i
 
