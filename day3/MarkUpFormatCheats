@@ -1,0 +1,9 @@
+# - Heading
+**[word]** - bold
+_[word]_ - italics
+[sentence](link) - hyperlink
+![sentence](link) - for image
+> [sentence] - backquotes
+* [sentence] - unordered list
+1. [sentence] - ordered list
+
